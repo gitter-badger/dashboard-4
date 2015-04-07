@@ -1,0 +1,90 @@
+/* CSS declarations go here */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.brand-logo{
+	font-family: 'Oswald', sans-serif;
+}
+
+
+.container {
+    
+    margin: 15px;
+}
+
+.cont{
+	padding:20px;
+	padding-left: 260px !important;
+}
+
+
+@media screen and (max-width: 800px) {
+    .container {
+    	padding-left: 20px !important;
+    	margin: 0px !important;
+    }
+
+    .cont {
+    	padding-left: 20px !important;
+    }
+
+}
+
+.side-nav{
+	color:black;
+	padding: 10px;
+	padding-left: 0px !important;
+	z-index: -100;
+}
+
+#padleft{
+	padding-left: 10px !important;
+}
+
+input{
+	color:black !important;
+}
+
+#red{color:red;}
+
+#blue{color:indigo;}
+
+#yellow{color:yellow;}
+
+#green{color:green;}
+
+#time{font-size:5pt; color:gray;}
+
+#black{color:#009688;}
+
+#psts{list-style-type: none;}
+
+nav{
+	background-color: #be382a !important;
+	text-align: center;
+}
+
+img{
+	text-align: center;
+}
+
+#nav-mobile{
+	position: center;
+}
+
+.logoimg{
+	width:60%;
+}
+
+#modal1{
+	height:1500px !important;
+	opacity: .99;
+}
+
+.btn{color: white;}
+
+.delete{color:yellow; font-size: 9.5pt; font-variant: uppercase;}
+
+.colsel{
+	z-index: 1200;
+}
