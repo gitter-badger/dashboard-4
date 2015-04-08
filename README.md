@@ -5,4 +5,4 @@ Node.js assignment managing app using the Meteor framework.
 
 Error ENOENT on both travis-ci and on local machine, deployment works fine. Issue opened.
 
-# deployed at http://assignly.meteor.com/
+### deployed at http://assignly.meteor.com/

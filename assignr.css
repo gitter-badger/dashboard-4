@@ -1,14 +1,19 @@
 /* CSS declarations go here */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
 
 .brand-logo{
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter !important;
+	
+}
+
+body{
+        background-color: #1A1A1A;
 }
 
 
 .container {
-    
     margin: 15px;
 }
 
@@ -30,16 +35,23 @@
 
 }
 
+.btn{
+    border-radius: 0px !important;
+    background-color: #3db39e !important;
+    color:gray;
+}
+
 .side-nav{
 	color:black;
 	padding: 10px;
 	padding-left: 0px !important;
-	z-index: -100;
+	background-color: #FBFBFB;
+	padding-right: 0px !important;
 }
 
-#padleft{
+/*#padleft{
 	padding-left: 10px !important;
-}
+}*/
 
 input{
 	color:black !important;
