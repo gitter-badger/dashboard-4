@@ -126,7 +126,8 @@ img{
 paper-fab{
 	float:right !important;
 	position: absolute;
-	top:89vh;
-	left:80vw;
+	bottom:0;
+    right:0;
+    margin:15px;
 	background-color: #be382a !important;
 }
