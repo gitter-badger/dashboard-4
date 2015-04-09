@@ -2,7 +2,17 @@
   <title>AssignMe 1.1</title>
   <!--<link rel="import" href="public/components/paper-elements/paper-elements.html">-->
   <script src="bower_components/platform/platform.js"></script>
-  <link href="bower_components/paper-input/paper-input.html" rel="import">
+  <link href="bower_components/paper-input/paper-input-decorator.html" rel="import">
+  <link href="bower_components/paper-button/paper-button-base.html" rel="import">
+  <link href="bower_components/paper-button/paper-button.html" rel="import">
+    <link href="bower_components/paper-item/paper-item.html" rel="import">
+    <link href="bower_components/paper-dropdown/paper-dropdown.html" rel="import">
+        <link href="bower_components/paper-menu-button/paper-menu-button.html" rel="import">
+        <link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+    <link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
+    <link href="bower_components/paper-fab/paper-fab.html" rel="import">
+    <link href="bower_components/paper-toast/paper-toast.html" rel="import">
+  <link href="bower_components/core-icon/core-icon.html" rel="import">
 
         <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -18,54 +28,37 @@
     <!--<li><a href="#!">First Sidebar Link</a></li>
     <li><a href="#!">Second Sidebar Link</a></li>--><div id="padleft">
     <img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/pencil-512.png" class="logoimg"/>
-
       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">NEW ASSIGNMENT</a></div>
-
            <li class="mn"><a href="#!">Options</a></li>
     <li class="mn"><a href="#modal2" class="modal-trigger">About</a></li>
- 
 </ul></nav>
   <div class="cont">
-
-
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h6>Add New Assignment</h6>
+      <h4>Add New Assignment</h4>
+    <form is="ajax-form" class="new-task">
+        <paper-input-decorator floatingLabel label="Title">
+        <input label="Title" id="title" name="title">
+            </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Description">
+        <input label="Description" name="contentins">
+            </paper-input-decorator>
+<br>
 
-    <form class="new-task">
-        <!--<input type="text" name="title" class="a" placeholder="Type to add new posts" /><br>
-        <input type="text" name="contentins" placeholder="Type to add new posts" /><br>-->
-        <paper-input floatinglabel label="Title" name="title">Title</paper-input>
-        <paper-input floatinglabel label="Description" name="contentins">Description</paper-input>
-          <select name="colorselect" class="colsel browser-default">
+<input type="date" class="datepicker" name="duedate" placeholder="Due Date">
+    <br>
+              <select name="colorselect" class="colsel browser-default center-align">
+  <option value="#FBFBFB">Default</option>
   <option value="teal">Teal</option>
   <option value="crimson">Crimson</option>
-  <option value="tomato">Flamingo</option>
   <option value="indigo">Indigo</option>
   <option value="MediumSeaGreen">Sea Green</option>
-
-</select>
-
-
-
-<input type="date" class="datepicker" name="duedate">
-
-      <button class="button-primary" type="submit">SEND</button>
-      <paper-button type="submit">flat button</paper-button>
-      
+</select><br>
+      <button type="submit" is="paper-button-submit" class="waves-effect waves-light"><core-icon icon="done"></core-icon>
+      </button>
       </form>
-
-
-
-
-    </div>
-    <div class="modal-footer">
-      
     </div>
   </div>
-
-
-
 <div id="modal2" class="modal">
     <div class="modal-content">
       <h1>About Assingly</h1>
@@ -74,15 +67,6 @@
       	<p>Built using Materialize and Meteor Framework</p>
     </div>
   </div>
-
-
-
-
-
-
-
-
-      
         <ul id="psts">
 
       {{#each posts}}
@@ -91,57 +75,36 @@
 
     </ul>
 
-
-
-
-   
-
-
-  
+  <paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab>
   </div>
-  <!-- Compiled and minified JQUERY -->
   <script type="text/javascript">
-  	   
-
-
   $(document).ready(function() {
-
-  	// set ohters element to the initial level
    $alert($('.side-nav').css('z-index', -10 - 1));
-   // set clicked element to a higher level
-   $('.colsel').css('z-index', 11 + 1);
-
-
-   $('.color-box').colpick();
 }
-
-  </script>
-  <!-- Compiled and minified Materialize.JS 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.0/js/materialize.min.js"></script>-->
-
-
+</script>
+  <paper-toast id="toast3" class="capsule core-transition core-transition-bottom fit-bottom" text="Assignment Checked Off !" icon="assignment-turned-in" style="padding-right: 60px; position: fixed; outline: none; z-index: 14; box-sizing: border-box; display: none;" role="status" touch-action="none" tabindex="-1"></paper-toast>
 </body>
 
+
 <template name="post">
- <!-- <li class="submitted">
-    <span class="title" style="color:{{color}};font-size:20pt;"> {{title}}</span>  {{#if currentUser}}  <button class="delete" style="float:right;">&times;</button> {{/if}}
-  </li>
 
-  <li><span class="article" style="color:{{color}}">{{article}}</span></li>
-  <p id="time">{{createdAt}}</p> <p name="def">{{CONSTANTZINDEX}}</p>  <hr>-->
-
-
-
-
-
-  <div class="card-panel teal" style="background-color:{{color}} !important;">
-          <span class="white-text">
+  <div class="card-panel" style="background-color:{{color}} !important;">
+          <span class="">
            <h3>{{title}}</h3>
            <h5>{{due}}</h5>
           <h6>{{article}}</h6>
           </span>
            <div class="card-action">
-              <a href="#" class="delete">MARK AS DONE</a>
+              <!--<a href="#" class="delete">MARK AS DONE</a>-->
+              <paper-menu-button style="float:right;top:-29px;">
+    <paper-icon-button icon="menu" noink></paper-icon-button>
+    <paper-dropdown halign="right" class="dropdown">
+        <core-menu class="menu">
+            <paper-item class="delete" onclick="document.querySelector('#toast3').show()"><core-icon icon="arrow-forward"></core-icon>Turned In</paper-item>
+        </core-menu>
+    </paper-dropdown>
+</paper-menu-button>
             </div>
 </div>
+
 </template>

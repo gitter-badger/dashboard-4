@@ -11,12 +11,32 @@
 body{
         background-color: #1A1A1A;
 }
+button {
+    padding:0;
+    font-weight: bolder;
+
+    padding:1em;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  button button::-moz-focus-inner {
+    border: 0;
+  }
 
 
 .container {
     margin: 15px;
 }
 
+core-icon[icon="done"] {
+    color: seagreen;
+    width:32px;
+    height: 32px;
+  }
+
+form{
+	text-align: center;
+}
 .cont{
 	padding:20px;
 	padding-left: 260px !important;
@@ -90,13 +110,23 @@ img{
 
 #modal1{
 	height:1500px !important;
-	opacity: .99;
+	opacity: 1 !important;
 }
 
 .btn{color: white;}
 
-.delete{color:yellow; font-size: 9.5pt; font-variant: uppercase;}
+.card-panel{
+	color:black !important;
+}
 
 .colsel{
 	z-index: 1200;
+}
+
+paper-fab{
+	float:right !important;
+	position: absolute;
+	top:89vh;
+	left:80vw;
+	background-color: #be382a !important;
 }
