@@ -1,10 +1,41 @@
 Posts = new Mongo.Collection("posts");
 
+Meteor.methods({
+
+  charlie: function(){
+      var d = new Date()
+      var x = d.getDate();
+      var y = (d.getMonth() < 10 ? '0' : '') + d.getMonth();
+      var z = d.getFullYear();
+      var alpha = d.getHours();
+      var beta = d.getMinutes();
+
+      return x + "." + y + "." + z + "  " + alpha + ":" + beta;
+  }
+
+});
 
 if (Meteor.isClient) {
 
+  output = function(proto,n){
+      console.log("Output "+proto+" exited with code "+n)
+    }
+
+  var curfew;
 
   Template.body.rendered = function () {
+
+    curfew = document.querySelector("#purger");
+    output('LOAD',1+1);
+
+    curfew.addEventListener("click", function onclick(event) {
+        Meteor.call("purge");
+      });
+
+    foxtrot = function(){
+       output("FOXTROT",3+3);
+       Meteor.call("purge");
+    }
     $('.collapsible').collapsible({
       accordion : false
     });
@@ -18,8 +49,6 @@ if (Meteor.isClient) {
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
         
-    $(".colsel").css("z-index", Math.floor(Math.random() * 2000 + 1000))
-    console.log("selected random z-index");
     $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
@@ -34,8 +63,9 @@ if (Meteor.isClient) {
       return Posts.find({}, {sort: {createdAt: -1}});
     }
 
-
   });
+
+
 
   Template.body.events({
     "submit .new-task": function (event) {
@@ -44,15 +74,26 @@ if (Meteor.isClient) {
       var color = event.target.colorselect.value;
       var article = event.target.contentins.value;
       var due = event.target.duedate.value;
+      var eclair = Posts.find().count();
+      var dexter;
 
-      Posts.insert({
-        title: title,
-        createdAt: new Date(), // current time
-        color: color,
-        article: article,
-        due: due
+      if(title != ""){
+
+      Meteor.call('charlie', function(err, data) {
+          Posts.insert({
+          title: title,
+          createdAt: new Date(), // current time
+          dexter: data,
+          color: color,
+          article: article,
+          due: due,
+          count: eclair
+        });
       });
 
+            } else {
+                  console.log("0xdeadbeef");
+              } 
       event.target.title.value = "";
       event.target.content.value = "";
 
@@ -66,6 +107,25 @@ if (Meteor.isClient) {
     "click .delete": function () {
       Posts.remove(this._id);
     }
+  });
+
+}
+
+if (Meteor.isServer) {
+
+  Meteor.startup(function() {
+
+    return Meteor.methods({
+
+      purge: function() {
+
+        return Posts.remove({});
+        console.log(1+1);
+
+      }
+
+    });
+
   });
 
 }

@@ -13,3 +13,5 @@ accounts-google
 tommyjs:colpick
 materialize:materialize
 ccorcos:animate
+cfs:standard-packages
+cfs:gridfs
