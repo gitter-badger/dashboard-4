@@ -1,8 +1,19 @@
-# assignly [![Build Status](https://travis-ci.org/sqrdcat/assignly.svg?branch=master)](https://travis-ci.org/sqrdcat/assignly)
-Node.js assignment managing app using the Meteor framework.
+# Assignly [![Build Status](https://travis-ci.org/sqrdcat/assignly.svg?branch=master)](https://travis-ci.org/sqrdcat/assignly)
+Assignment managing webapp built using the Meteor framework, Polymer paper elements and Materialize.
+Assignly lets you track and organize your tasks, assignments or jobs quickly and easily.
 
-# build stat.
+### Installing the source code
 
-Error ENOENT on both travis-ci and on local machine, deployment works fine. Issue opened.
+I. If you haven't already, install nodejs through apt-get / yum.
 
-### deployed at http://assignly.meteor.com/
+II. Make sure meteor is installed, if not, run this command : $ curl http://install.meteor.com | sh
+
+IIIa. If you have git installed, run : $ git clone https://github.com/sqrdcat/assignly.git
+
+IIIb. If you don't have git installed, download the files, extract them and point the terminal to that location using cd
+
+IV. In the terminal window, run 'meteor' and enjoy. You are now running a local version of my app.
+
+### Got suggestions ? Spin your own branch and I'll check it.
+
+## A live version of assignly is deployed at http://assignly.meteor.com
