@@ -10,3 +10,5 @@ App.icons({
   'android_hdpi': 'resources/icons/icon-hdpi.png',
   'android_xhdpi': 'resources/icons/icon-xhdpi.png'
 });
+
+App.accessRule('https://localhost');
