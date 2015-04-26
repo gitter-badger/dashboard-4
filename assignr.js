@@ -1,4 +1,17 @@
+/* 
+  ___          _             _       
+ / _ \        (_)           | |      
+/ /_\ \___ ___ _  __ _ _ __ | |_   _ 
+|  _  / __/ __| |/ _` | '_ \| | | | |
+| | | \__ \__ \ | (_| | | | | | |_| |
+\_| |_/___/___/_|\__, |_| |_|_|\__, |
+                  __/ |         __/ |
+                 |___/         |___/ 
+
+*/
+
 Posts = new Mongo.Collection("posts");
+Comments = new Mongo.Collection("comments");
 
 Meteor.methods({
 
@@ -51,7 +64,13 @@ if (Meteor.isClient) {
         
     $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 10, // Transition in duration
+      out_duration: 10, // Transition out duration
+    }
+  );
 });
 
 
