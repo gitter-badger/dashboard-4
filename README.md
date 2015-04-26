@@ -4,7 +4,7 @@ Assignly lets you track and organize your tasks, assignments or jobs quickly and
 
 ### Installing the source code
 
-I. If you haven't already, install nodejs and npm through apt-get / yum.
+I. If you haven't already, install nodejs and npm through apt-get or yum if you have a REHL-based OS.
 
 II. Make sure meteor is installed, if not, run this command : $ curl http://install.meteor.com | sh
 
