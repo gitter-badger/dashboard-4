@@ -66,8 +66,8 @@ if (Meteor.isClient) {
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      in_duration: 10, // Transition in duration
+      opacity: .9, // Opacity of modal background
+      in_duration: 50, // Transition in duration
       out_duration: 10, // Transition out duration
     }
   );
