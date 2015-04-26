@@ -2,7 +2,7 @@
 Assignment managing webapp built using the Meteor framework, Polymer paper elements and Materialize.
 Assignly lets you track and organize your tasks, assignments or jobs quickly and easily.
 
-### Installing the source code
+### Setting Up
 
 I. If you haven't already, install nodejs and npm through apt-get install or yum install if you have a REHL-based OS such as Fedora.
 
