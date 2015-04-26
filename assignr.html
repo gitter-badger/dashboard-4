@@ -11,11 +11,12 @@
 	<link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
 	<link href="bower_components/paper-fab/paper-fab.html" rel="import">
 	<link href="bower_components/paper-toast/paper-toast.html" rel="import">
+	<link href="animate.css" rel="stylesheet">
 	<link href="bower_components/core-icon/core-icon.html" rel="import">
 	<link href="bower_components/core-tooltip/core-tooltip.html" rel="import">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
-<body>
+<body class="animated fadeIn">
 	 <nav class="navbar-fixed">
 		 <a href="#" class="brand-logo center"><core-icon icon="assignment-ind"></core-icon>  assignly</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -26,12 +27,12 @@
 		<img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/pencil-512.png" class="logoimg"/>
 			<!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">NEW ASSIGNMENT</a>--></div>
 					 <li class="mn"><a href="#modal1" class="modal-trigger"><core-icon icon="add"></core-icon>   NEW ( {{postscount}} )</a></li>
-					 <li class="mn disabled"><a href="#!"><core-icon icon="view-array"></core-icon>   SLIDE VIEW</a></li>
+					 <!--<li class="mn disabled"><a href="#!"><core-icon icon="view-array"></core-icon>   SLIDE VIEW</a></li>-->
 					 <li class="mn"><a href="#!" onclick="foxtrot();return 3+3;"  id="purger"><core-icon icon="done-all"></core-icon>   PURGE</a></li>
 		<li class="mn"><a href="#modal2" class="modal-trigger"><core-icon icon="info"></core-icon>   ABOUT</a></li>
 </ul></nav>
 	<div class="cont">
-	<div id="modal1" class="modal">
+	<div id="modal1" class="modal bounceIn animated">
 		<div class="modal-content">
 			<h6>Add New Assignments</h6>
 		<form class="new-task">
@@ -87,9 +88,9 @@
 <script></script>
 
 
-	<div class="card-panel" style="background-color:{{color}} !important;">
+	<div class="card-panel animated fadeIn" style="background-color:{{color}} !important;">
 					<span class="">
-					 <h3>{{title}} : {{count}}</h3>
+					 <h3>{{title}}</h3>
 					 <h5>{{due}}</h5>
 					<h6>{{article}}</h6>
 					</span>

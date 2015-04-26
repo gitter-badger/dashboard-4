@@ -1,7 +1,7 @@
 App.info({
   name: 'Assignly',
   description: 'Manage your assignments with ease.',
-  version: '1.1.1'
+  version: '1.1.2'
 });
 
 App.icons({
