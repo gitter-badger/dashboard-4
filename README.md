@@ -20,6 +20,4 @@ VI. Switch back to /assignly and run meteor update to ensure all packages are up
 
 VII. Start meteor and enjoy. You are now running a local version of my app.
 
-### Got suggestions ? Spin your own branch and I'll check it.
-
-## A live version of assignly is deployed at http://assignly.meteor.com
+#### A live version of assignly is deployed at http://assignly.meteor.com
