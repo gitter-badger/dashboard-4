@@ -61,8 +61,11 @@ if (Meteor.isClient) {
   Template.body.helpers({
     posts: function () {
       return Posts.find({}, {sort: {createdAt: -1}});
-    }
+    },
 
+    postscount: function () {
+      return Posts.find({}, {sort: {createdAt: -1}}).count();
+    }
   });
 
 
@@ -74,7 +77,7 @@ if (Meteor.isClient) {
       var color = event.target.colorselect.value;
       var article = event.target.contentins.value;
       var due = event.target.duedate.value;
-      var eclair = Posts.find().count();
+      var eclair = Posts.find({}).count();
       var dexter;
 
       if(title != ""){
@@ -122,7 +125,11 @@ if (Meteor.isServer) {
         return Posts.remove({});
         console.log(1+1);
 
-      }
+      },
+
+      getPostsCount: function () {
+      return Posts.find().count();
+    }
 
     });
 

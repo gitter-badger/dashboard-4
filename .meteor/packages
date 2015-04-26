@@ -15,4 +15,3 @@ materialize:materialize
 ccorcos:animate
 cfs:standard-packages
 cfs:gridfs
-iron:router

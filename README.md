@@ -4,7 +4,7 @@ Assignly lets you track and organize your tasks, assignments or jobs quickly and
 
 ### Installing the source code
 
-I. If you haven't already, install nodejs through apt-get / yum.
+I. If you haven't already, install nodejs and npm through apt-get / yum.
 
 II. Make sure meteor is installed, if not, run this command : $ curl http://install.meteor.com | sh
 
@@ -12,7 +12,13 @@ IIIa. If you have git installed, run : $ git clone https://github.com/sqrdcat/as
 
 IIIb. If you don't have git installed, download the files, extract them and point the terminal to that location using cd
 
-IV. In the terminal window, run 'meteor' and enjoy. You are now running a local version of my app.
+IV. Install bower with $ su - && npm install -g bower
+
+V. Open a terminal in assignly/public and run a bower update to ensure all components are up to date
+
+VI. Switch back to /assignly and run meteor update to ensure all packages are up to date
+
+VII. Start meteor and enjoy. You are now running a local version of my app.
 
 ### Got suggestions ? Spin your own branch and I'll check it.
 

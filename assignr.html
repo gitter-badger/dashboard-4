@@ -25,8 +25,8 @@
 		<div id="padleft">
 		<img src="https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/pencil-512.png" class="logoimg"/>
 			<!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">NEW ASSIGNMENT</a>--></div>
-					 <li class="mn"><a href="#modal1" class="modal-trigger"><core-icon icon="add"></core-icon>   NEW ASSIGNMENT</a></li>
-					 <li class="mn"><a href="#!"><core-icon icon="view-array"></core-icon>   SLIDE VIEW</a></li>
+					 <li class="mn"><a href="#modal1" class="modal-trigger"><core-icon icon="add"></core-icon>   NEW ( {{postscount}} )</a></li>
+					 <li class="mn disabled"><a href="#!"><core-icon icon="view-array"></core-icon>   SLIDE VIEW</a></li>
 					 <li class="mn"><a href="#!" onclick="foxtrot();return 3+3;"  id="purger"><core-icon icon="done-all"></core-icon>   PURGE</a></li>
 		<li class="mn"><a href="#modal2" class="modal-trigger"><core-icon icon="info"></core-icon>   ABOUT</a></li>
 </ul></nav>
@@ -84,10 +84,12 @@
 
 
 <template name="post">
+<script></script>
+
 
 	<div class="card-panel" style="background-color:{{color}} !important;">
 					<span class="">
-					 <h3>{{title}}</h3>
+					 <h3>{{title}} : {{count}}</h3>
 					 <h5>{{due}}</h5>
 					<h6>{{article}}</h6>
 					</span>
