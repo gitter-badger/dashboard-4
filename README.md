@@ -1,3 +1,12 @@
+`  ___          _             _      ` 
+` / _ \        (_)           | |      `
+`/ /_\ \___ ___ _  __ _ _ __ | |_   _ `
+`|  _  / __/ __| |/ _` | '_ \| | | | |`
+`| | | \__ \__ \ | (_| | | | | | |_| |`
+`\_| |_/___/___/_|\__, |_| |_|_|\__, |`
+`                  __/ |         __/ |`
+`                 |___/         |___/ `
+
 # Assignly [![Build Status](https://travis-ci.org/sqrdcat/assignly.svg?branch=master)](https://travis-ci.org/sqrdcat/assignly)
 Assignment managing webapp built using the Meteor framework, Polymer paper elements and Materialize.
 Assignly lets you track and organize your tasks, assignments or jobs quickly and easily.
