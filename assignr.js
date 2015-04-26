@@ -79,7 +79,7 @@ if (Meteor.isClient) {
 
   Template.body.helpers({
     posts: function () {
-      return Posts.find({}, {sort: {createdAt: -1}});
+      return Posts.find({}, {sort: {createdAt: -1}}, {reactive:false});
     },
 
     postscount: function () {
@@ -111,6 +111,7 @@ if (Meteor.isClient) {
           due: due,
           count: eclair
         });
+            return false;
       });
 
             } else {
@@ -118,11 +119,11 @@ if (Meteor.isClient) {
               } 
       event.target.title.value = "";
       event.target.content.value = "";
-
       return false;
+      event.preventDefault();
     }
 
-  });
+  }, {reactive:false});
 
 
   Template.post.events({
