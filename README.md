@@ -1,4 +1,7 @@
-# Assignly [![forthebadge](http://forthebadge.com/images/badges/certified-snoop-lion.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+# assigny 0.1.3
+
+[![forthebadge](http://forthebadge.com/images/badges/certified-snoop-lion.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+
 Assignment managing webapp built using the Meteor framework, Polymer paper elements and Materialize.
 Assignly lets you track and organize your tasks, assignments or jobs quickly and easily.
 
