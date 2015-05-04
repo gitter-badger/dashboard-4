@@ -16,12 +16,12 @@
 	<link href="bower_components/core-tooltip/core-tooltip.html" rel="import">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
-<body class="animated fadeIn">
+<body >
 	 <nav class="navbar-fixed">
 		 <a href="#" class="brand-logo center"><core-icon icon="assignment-ind"></core-icon>  assignly</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 			</ul>
-	<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	<a href="#" data-activates="slide-out" class="button-collapse"><!-- <i class="mdi-navigation-menu"></i> --> &nbsp;&nbsp;&nbsp;<core-icon id="sideopener" icon="chevron-right"></core-icon> </a>
 	<ul id="slide-out" class="side-nav fixed">
 		<div id="padleft">
 		<img src="sidelogo.png" class="logoimg"/>
@@ -46,7 +46,7 @@
 <input type="date" class="datepicker" name="duedate" placeholder="Due Date">
 		<br>
 							<select name="colorselect" class="colsel browser-default center-align">
-	<option value="#FBFBFB">Default</option>
+	<option value="black">Default</option>
 	<option value="teal">Teal</option>
 	<option value="crimson">Crimson</option>
 	<option value="indigo">Indigo</option>
@@ -88,14 +88,14 @@
 <script></script>
 
 
-	<div class="card-panel animated fadeIn" style="background-color:{{color}} !important;">
+	<div class="card-panel animated fadeIn" >
 					<span class="">
-					 <h3>{{title}}</h3>
+					 <h3  style="color:{{color}} !important;">{{title}}</h3>
 					 <h5>{{due}}</h5>
 					<h6>{{article}}</h6>
-					</span>
+					</span><br>
 					 <div class="card-action">
-							<paper-menu-button style="float:right;top:-29px;">
+							<!--<paper-menu-button style="float:right;top:-29px;">
 		<paper-icon-button icon="menu" noink></paper-icon-button>
 		<paper-dropdown halign="right" class="dropdown">
 				<core-menu class="menu">
@@ -103,7 +103,8 @@
 						<paper-item disabled>{{dexter}}</paper-item>
 				</core-menu>
 		</paper-dropdown>
-</paper-menu-button>
+</paper-menu-button>--><paper-icon-button icon="close" class="delete" style="float:right;top:-29px;"></paper-icon-button>
+
 						</div>
 </div>
 

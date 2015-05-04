@@ -2,16 +2,37 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:100);
 
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
 .brand-logo{
 	font-family: 'Martel Sans', sans-serif;
-	font-weight: lighter !important;
+	font-weight: light !important;
+    text-align: right;
+    top: 2px !important;
 	
 }
+
+#sideopener{padding-left: 30px !important;}
 
 .mn{color: white !important;}
 
 body{
         background-color: /* #1A1A1A */ #5e4949;
+        background: linear-gradient(301deg, #2a9e80, #49c5c4, #495ec5, #8049c5, #c549bd, #c5497b, #c58449, #88c549);
+background-size: 1600% 1600%;
+
+-webkit-animation: AnimationName 59s ease infinite;
+animation: AnimationName 59s ease infinite;
 
 }
 button {
@@ -111,9 +132,10 @@ input{
 #psts{list-style-type: none;}
 
 nav{
-	background-color: #be382a !important;
+	background-color:  /* #00897B */ transparent !important;
 	text-align: center;
     position: fixed !important; 
+    box-shadow: none !important;
 }
 
 li{

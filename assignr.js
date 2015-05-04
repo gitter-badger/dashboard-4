@@ -55,7 +55,12 @@ if (Meteor.isClient) {
 
     $('select').material_select();
     $('.colsel').material_select();
-    $(".button-collapse").sideNav();
+ $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
 
     $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
@@ -63,7 +68,7 @@ if (Meteor.isClient) {
   });
         
     $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .9, // Opacity of modal background
@@ -85,6 +90,7 @@ if (Meteor.isClient) {
     postscount: function () {
       return Posts.find({}, {sort: {createdAt: -1}}).count();
     }
+
   });
 
 
@@ -128,7 +134,11 @@ if (Meteor.isClient) {
 
   Template.post.events({
     "click .delete": function () {
-      Posts.remove(this._id);
+      if (confirm('Are you sure ?')) { 
+Posts.remove(this._id);
+document.querySelector('#toast3').show()
+}
+      
     }
   });
 
