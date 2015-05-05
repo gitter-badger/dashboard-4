@@ -14,12 +14,17 @@
 }
 
 
+
 .brand-logo{
 	font-family: 'Martel Sans', sans-serif;
 	font-weight: light !important;
     text-align: right;
     top: 2px !important;
 	
+}
+
+core-header-panel{
+    background-color: blue !important;
 }
 
 #sideopener{padding-left: 30px !important;}
@@ -49,6 +54,12 @@ button {
   button button::-moz-focus-inner {
     border: 0;
   }
+
+.catgif{
+    opacity:0.7;width:100vw;height:100vh;position: fixed;z-index: -100;
+    left: 0 !important;
+    top:0 !important;
+}
 
 
 .container {
@@ -91,6 +102,7 @@ form{
     padding-left: 0px !important;
     background-color: #FBFBFB;
     padding-right: 0px !important;
+    height:100%;
 }
 
 }
@@ -109,9 +121,10 @@ form{
 	padding-right: 0px !important;
 }
 
-/*#padleft{
-	padding-left: 10px !important;
-}*/
+#padleft{
+
+    top:0px !important;
+}
 
 input{
 	color:black !important;

@@ -89,8 +89,10 @@ if (Meteor.isClient) {
 
     postscount: function () {
       return Posts.find({}, {sort: {createdAt: -1}}).count();
+    },
+    equals: function(a, b){
+      return a == b;
     }
-
   });
 
 
@@ -124,16 +126,16 @@ if (Meteor.isClient) {
                   console.log("0xdeadbeef");
               } 
       event.target.title.value = "";
-      event.target.content.value = "";
+      event.target.article.value = "";
       return false;
-      event.preventDefault();
+  event.preventDefault();
     }
 
   }, {reactive:false});
 
 
   Template.post.events({
-    "click .delete": function () {
+    "click .delete": function () {ant
       if (confirm('Are you sure ?')) { 
 Posts.remove(this._id);
 document.querySelector('#toast3').show()

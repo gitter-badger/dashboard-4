@@ -13,23 +13,25 @@
 	<link href="bower_components/paper-toast/paper-toast.html" rel="import">
 	<link href="animate.css" rel="stylesheet">
 	<link href="bower_components/core-icon/core-icon.html" rel="import">
-	<link href="bower_components/core-tooltip/core-tooltip.html" rel="import">
+		<link href="bower_components/core-tooltip/core-tooltip.html" rel="import">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
-<body >
+<body>
 	 <nav class="navbar-fixed">
 		 <a href="#" class="brand-logo center"><core-icon icon="assignment-ind"></core-icon>  assignly</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 			</ul>
 	<a href="#" data-activates="slide-out" class="button-collapse"><!-- <i class="mdi-navigation-menu"></i> --> &nbsp;&nbsp;&nbsp;<core-icon id="sideopener" icon="chevron-right"></core-icon> </a>
-	<ul id="slide-out" class="side-nav fixed">
+	<ul id="slide-out" class="side-nav fixed" style="height:100%;">
 		<div id="padleft">
-		<img src="sidelogo.png" class="logoimg"/>
-			<!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">NEW ASSIGNMENT</a>--></div>
-					 <li class="mn"><a href="#modal1" class="modal-trigger"><core-icon icon="add"></core-icon>   NEW ( {{postscount}} )</a></li>
+		
+		<img src="sidelogo.png" class="logoimg z-depth-2 circle"/></div>	
+
+
+							 <li class="mn"><a href="#modal1" class="modal-trigger waves-effect waves-light"><core-icon icon="add"></core-icon>   NEW ( {{postscount}} )</a></li>
 					 <!--<li class="mn disabled"><a href="#!"><core-icon icon="view-array"></core-icon>   SLIDE VIEW</a></li>-->
-					 <li class="mn"><a href="#!" onclick="foxtrot();return 3+3;"  id="purger"><core-icon icon="done-all"></core-icon>   PURGE</a></li>
-		<li class="mn"><a href="#modal2" class="modal-trigger"><core-icon icon="info"></core-icon>   ABOUT</a></li>
+					 <li class="mn"><a href="#!" onclick="foxtrot();return 3+3;" class="waves-effect waves-light" id="purger"><core-icon icon="done-all"></core-icon>   PURGE</a></li>
+		<li class="mn"><a href="#modal2" class="modal-trigger waves-effect waves-light"><core-icon icon="info"></core-icon>   ABOUT</a></li>
 </ul></nav>
 	<div class="cont">
 	<div id="modal1" class="modal bounceIn animated">
@@ -75,6 +77,13 @@
 	<core-tooltip label="Add Assignment" position="left" id="addtooltip" show>
 	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></core-tooltip>
 	</div>
+				{{#if equals postscount 0}}
+			<div style="text-align:center;">
+			<img class="catgif" src="cat.gif"/><br>
+			   <h5 style="color:white;top:300px !important;font-family: 'Martel Sans', sans-serif;
+	font-weight: light !important;">You have no new assignments ! Have this cat gif.</h5></div>
+			 {{/if}}
+
 	<script type="text/javascript">
 	$(document).ready(function() {
 	 $alert($('.side-nav').css('z-index', -10 - 1));
