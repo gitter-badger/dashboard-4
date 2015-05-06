@@ -10,8 +10,9 @@
 
 */
 
-Posts = new Mongo.Collection("posts");
+Posts = new Ground.Collection("posts");
 Comments = new Mongo.Collection("comments");
+
 
 Meteor.methods({
 
@@ -29,6 +30,7 @@ Meteor.methods({
 });
 
 if (Meteor.isClient) {
+
 
   output = function(proto,n){
       console.log("Output "+proto+" exited with code "+n)
@@ -55,12 +57,7 @@ if (Meteor.isClient) {
 
     $('select').material_select();
     $('.colsel').material_select();
- $('.button-collapse').sideNav({
-      menuWidth: 240, // Default is 240
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
+ $('.button-collapse').sideNav();
 
     $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
@@ -75,6 +72,7 @@ if (Meteor.isClient) {
       in_duration: 50, // Transition in duration
       out_duration: 10, // Transition out duration
     }
+
   );
 });
 
@@ -135,7 +133,7 @@ if (Meteor.isClient) {
 
 
   Template.post.events({
-    "click .delete": function () {ant
+    "click .delete": function () {
       if (confirm('Are you sure ?')) { 
 Posts.remove(this._id);
 document.querySelector('#toast3').show()

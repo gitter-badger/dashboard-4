@@ -2,38 +2,45 @@
 	<title>Assignly 0.1</title>
 	<script src="bower_components/platform/platform.js"></script>
 	<link href="bower_components/paper-input/paper-input-decorator.html" rel="import">
+		<link href="bower_components/core-drawer-panel/core-drawer-panel.html" rel="import">
 	<link href="bower_components/paper-button/paper-button-base.html" rel="import">
 	<link href="bower_components/paper-button/paper-button.html" rel="import">
 	<link href="bower_components/paper-item/paper-item.html" rel="import">
-	<link href="bower_components/paper-dropdown/paper-dropdown.html" rel="import">
+
 	<link href="bower_components/paper-menu-button/paper-menu-button.html" rel="import">
-	<link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+	<link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import"
+	>
 	<link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
 	<link href="bower_components/paper-fab/paper-fab.html" rel="import">
 	<link href="bower_components/paper-toast/paper-toast.html" rel="import">
 	<link href="animate.css" rel="stylesheet">
 	<link href="bower_components/core-icon/core-icon.html" rel="import">
+		<link href="bower_components/core-menu/core-menu.html" rel="import">
+				<link href="bower_components/core-toolbar/core-toolbar.html" rel="import">
+			<link href="bower_components/core-item/core-item.html" rel="import">
+		<link href="bower_components/core-icon-button/core-icon-button.html" rel="import">
 		<link href="bower_components/core-tooltip/core-tooltip.html" rel="import">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
-	 <nav class="navbar-fixed">
-		 <a href="#" class="brand-logo center"><core-icon icon="assignment-ind"></core-icon>  assignly</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-			</ul>
-	<a href="#" data-activates="slide-out" class="button-collapse"><!-- <i class="mdi-navigation-menu"></i> --> &nbsp;&nbsp;&nbsp;<core-icon id="sideopener" icon="chevron-right"></core-icon> </a>
-	<ul id="slide-out" class="side-nav fixed" style="height:100%;">
-		<div id="padleft">
-		
-		<img src="sidelogo.png" class="logoimg z-depth-2 circle"/></div>	
+<core-drawer-panel>
+  <div class="sidedrawer" drawer> 
+<h4>Assignly.</h4><br>
+  		<core-menu selected="0">
+  <core-item icon="add" label="Add Assignment" href="#modal1" class="modal-trigger waves-effect waves-light"></core-item>
+  <core-item icon="done-all" label="Purge"   onclick="foxtrot();return 3+3;" class="waves-effect waves-light" id="purger" ></core-item>
+  <core-item icon="info" label="About"     href="#modal2" class="modal-trigger waves-effect waves-light"></core-item>
+</core-menu>
+
+   </div>
+  <div main> 
+<core-toolbar class="medium-tall z-depth-2">
+  	<core-icon-button icon="menu" core-drawer-toggle id="sideopener"> </core-icon-button>
+  <div class="bottom indent"><core-icon icon="assignment-ind"></core-icon>&nbsp;&nbsp;&nbsp; Assignments</div>
+</core-toolbar>
 
 
-							 <li class="mn"><a href="#modal1" class="modal-trigger waves-effect waves-light"><core-icon icon="add"></core-icon>   NEW ( {{postscount}} )</a></li>
-					 <!--<li class="mn disabled"><a href="#!"><core-icon icon="view-array"></core-icon>   SLIDE VIEW</a></li>-->
-					 <li class="mn"><a href="#!" onclick="foxtrot();return 3+3;" class="waves-effect waves-light" id="purger"><core-icon icon="done-all"></core-icon>   PURGE</a></li>
-		<li class="mn"><a href="#modal2" class="modal-trigger waves-effect waves-light"><core-icon icon="info"></core-icon>   ABOUT</a></li>
-</ul></nav>
-	<div class="cont">
+<div class="cont">
 	<div id="modal1" class="modal bounceIn animated">
 		<div class="modal-content">
 			<h6>Add New Assignments</h6>
@@ -54,7 +61,7 @@
 	<option value="indigo">Indigo</option>
 	<option value="MediumSeaGreen">Sea Green</option>
 </select><br>
-			<button type="submit" is="paper-button-submit" class="modal-action modal-close waves-effect waves-light"><core-icon icon="done"></core-icon>
+			<button type="submit" is="paper-button-submit" class="modal-action modal-close waves-effect waves-light submitbutton"><core-icon icon="done"></core-icon>
 			</button>
 			</form>
 		</div>
@@ -73,16 +80,22 @@
 				{{> post}}
 			{{/each}}
 
-		</ul>
-	<core-tooltip label="Add Assignment" position="left" id="addtooltip" show>
-	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></core-tooltip>
-	</div>
+		</ul>	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></div>
 				{{#if equals postscount 0}}
 			<div style="text-align:center;">
 			<img class="catgif" src="cat.gif"/><br>
 			   <h5 style="color:white;top:300px !important;font-family: 'Martel Sans', sans-serif;
 	font-weight: light !important;">You have no new assignments ! Have this cat gif.</h5></div>
+		<core-tooltip tip label="Add Assignment" position="left" id="addtooltip" show>
+	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></core-tooltip>
+
 			 {{/if}}
+
+  </div>
+</core-drawer-panel>
+
+
+	
 
 	<script type="text/javascript">
 	$(document).ready(function() {

@@ -14,6 +14,10 @@
 }
 
 
+[drawer] {
+  background-color: white !important;
+  padding:30px !important;
+}
 
 .brand-logo{
 	font-family: 'Martel Sans', sans-serif;
@@ -27,20 +31,16 @@ core-header-panel{
     background-color: blue !important;
 }
 
-#sideopener{padding-left: 30px !important;}
+#sideopener{}
 
 .mn{color: white !important;}
 
 body{
-        background-color: /* #1A1A1A */ #5e4949;
-        background: linear-gradient(301deg, #2a9e80, #49c5c4, #495ec5, #8049c5, #c549bd, #c5497b, #c58449, #88c549);
-background-size: 1600% 1600%;
-
--webkit-animation: AnimationName 59s ease infinite;
-animation: AnimationName 59s ease infinite;
+background-position: center bottom;
+background-color: #f4f4f4;
 
 }
-button {
+.submitbutton {
     padding:0;
     font-weight: bolder;
 
@@ -51,12 +51,12 @@ button {
 
 
 
-  button button::-moz-focus-inner {
+  .submitbutton button::-moz-focus-inner {
     border: 0;
   }
 
 .catgif{
-    opacity:0.7;width:100vw;height:100vh;position: fixed;z-index: -100;
+    opacity:0.9;width:100vw;height:100vh;position: fixed;z-index: -100;
     left: 0 !important;
     top:0 !important;
 }
@@ -80,9 +80,8 @@ form{
 	text-align: center;
 }
 .cont{
-    padding-top: 60px !important;
 	padding:20px;
-	padding-left: 260px !important;
+	padding-left: 200px !important;
 }
 
 
@@ -92,18 +91,11 @@ form{
     	margin: 0px !important;
     }
 
+
+
     .cont {
     	padding-left: 20px !important;
     }
-
-    .side-nav{
-    opacity: 0.99 !important;
-    padding: 10px;
-    padding-left: 0px !important;
-    background-color: #FBFBFB;
-    padding-right: 0px !important;
-    height:100%;
-}
 
 }
 
