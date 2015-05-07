@@ -11,8 +11,6 @@
 */
 
 Posts = new Ground.Collection("posts");
-Comments = new Mongo.Collection("comments");
-
 
 Meteor.methods({
 
@@ -30,6 +28,8 @@ Meteor.methods({
 });
 
 if (Meteor.isClient) {
+
+
 
 
   output = function(proto,n){

@@ -19,6 +19,10 @@
   padding:30px !important;
 }
 
+[main] {
+    overflow: auto;
+}
+
 .brand-logo{
 	font-family: 'Martel Sans', sans-serif;
 	font-weight: light !important;
@@ -69,6 +73,15 @@ background-color: #f4f4f4;
 
 #toast3{text-align: center;
 position: fixed;}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+core-scroll-header-panel {
+  height: 100%;
+}
+
 
 core-icon[icon="done"] {
     color: seagreen;
@@ -135,6 +148,12 @@ input{
 #black{color:#009688;}
 
 #psts{list-style-type: none;}
+
+
+core-toolbar{
+    background-color: #4DB6AC !important;
+}
+
 
 nav{
 	background-color:  /* #00897B */ transparent !important;

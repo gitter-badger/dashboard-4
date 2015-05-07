@@ -3,6 +3,7 @@
 	<script src="bower_components/platform/platform.js"></script>
 	<link href="bower_components/paper-input/paper-input-decorator.html" rel="import">
 		<link href="bower_components/core-drawer-panel/core-drawer-panel.html" rel="import">
+
 	<link href="bower_components/paper-button/paper-button-base.html" rel="import">
 	<link href="bower_components/paper-button/paper-button.html" rel="import">
 	<link href="bower_components/paper-item/paper-item.html" rel="import">
@@ -34,13 +35,16 @@
 
    </div>
   <div main> 
-<core-toolbar class="medium-tall z-depth-2">
+<core-toolbar class="z-depth-1 ye">
   	<core-icon-button icon="menu" core-drawer-toggle id="sideopener"> </core-icon-button>
   <div class="bottom indent"><core-icon icon="assignment-ind"></core-icon>&nbsp;&nbsp;&nbsp; Assignments</div>
 </core-toolbar>
 
 
 <div class="cont">
+
+
+
 	<div id="modal1" class="modal bounceIn animated">
 		<div class="modal-content">
 			<h6>Add New Assignments</h6>
@@ -83,11 +87,10 @@
 		</ul>	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></div>
 				{{#if equals postscount 0}}
 			<div style="text-align:center;">
-			<img class="catgif" src="cat.gif"/><br>
-			   <h5 style="color:white;top:300px !important;font-family: 'Martel Sans', sans-serif;
-	font-weight: light !important;">You have no new assignments ! Have this cat gif.</h5></div>
-		<core-tooltip tip label="Add Assignment" position="left" id="addtooltip" show>
-	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></core-tooltip>
+			   <h5 style="top:300px !important;font-family: 'Roboto', sans-serif;
+	font-weight: light !important;">You have no new assignments.</h5></div>
+		
+	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab>
 
 			 {{/if}}
 
