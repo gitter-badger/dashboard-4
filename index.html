@@ -1,60 +1,63 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Assignly by sqrdcat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dashboard by sqrdcat</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Assignly</h1>
-      <h2 class="project-tagline">Manage your assignments with ease.</h2>
-      <a href="https://github.com/sqrdcat/assignly" class="btn">View on GitHub</a>
-      <a href="https://github.com/sqrdcat/assignly/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/sqrdcat/assignly/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Dashboard</h1>
+        <p>The offline project managing tool.</p>
 
-    <section class="main-content">
-      <h1>
-<a id="assignly-" class="anchor" href="#assignly-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assignly <a href="https://travis-ci.org/sqrdcat/assignly"><img src="https://travis-ci.org/sqrdcat/assignly.svg?branch=master" alt="Build Status"></a>
-</h1>
+        <p class="view"><a href="https://github.com/sqrdcat/dashboard">View the Project on GitHub <small>sqrdcat/dashboard</small></a></p>
 
-<p>Assignment managing webapp built using the Meteor framework, Polymer paper elements and Materialize.
-Assignly lets you track and organize your tasks, assignments or jobs quickly and easily.</p>
 
-<h3>
-<a id="installing-the-source-code" class="anchor" href="#installing-the-source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing the source code</h3>
+        <ul>
+          <li><a href="https://github.com/sqrdcat/dashboard/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sqrdcat/dashboard/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sqrdcat/dashboard">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="dashboard" class="anchor" href="#dashboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>dashboard</h1>
 
-<p>I. If you haven't already, install nodejs through apt-get / yum.</p>
+<p><a href="http://forthebadge.com"><img src="http://forthebadge.com/images/badges/certified-snoop-lion.svg" alt="forthebadge"></a>  <a href="http://forthebadge.com"><img src="http://forthebadge.com/images/badges/uses-js.svg" alt="forthebadge"></a></p>
 
-<p>II. Make sure meteor is installed, if not, run this command : $ curl <a href="http://install.meteor.com">http://install.meteor.com</a> | sh</p>
-
-<p>IIIa. If you have git installed, run : $ git clone <a href="https://github.com/sqrdcat/assignly.git">https://github.com/sqrdcat/assignly.git</a></p>
-
-<p>IIIb. If you don't have git installed, download the files, extract them and point the terminal to that location using cd</p>
-
-<p>IV. In the terminal window, run 'meteor' and enjoy. You are now running a local version of my app.</p>
+<p>The offline TODO server.</p>
 
 <h3>
-<a id="got-suggestions--spin-your-own-branch-and-ill-check-it" class="anchor" href="#got-suggestions--spin-your-own-branch-and-ill-check-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Got suggestions ? Spin your own branch and I'll check it.</h3>
+<a id="setting-up" class="anchor" href="#setting-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up</h3>
 
-<h2>
-<a id="a-live-version-of-assignly-is-deployed-at-httpassignlymeteorcom" class="anchor" href="#a-live-version-of-assignly-is-deployed-at-httpassignlymeteorcom" aria-hidden="true"><span class="octicon octicon-link"></span></a>A live version of assignly is deployed at <a href="http://assignly.meteor.com">http://assignly.meteor.com</a>
-</h2>
+<p>I. Make sure meteor is installed, if not, run this command : $ curl <a href="http://install.meteor.com">http://install.meteor.com</a> | sh</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/sqrdcat/assignly">Assignly</a> is maintained by <a href="https://github.com/sqrdcat">sqrdcat</a>.</span>
+<p>IIa. If you have git installed, run : $ git clone <a href="https://github.com/sqrdcat/grpwrk.git">https://github.com/sqrdcat/grpwrk.git</a></p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+<p>IIb. If you don't have git installed, download the files, extract them and point the terminal to that location using cd</p>
+
+<p>III. Install bower with $ su - &amp;&amp; npm install -g bower</p>
+
+<p>IV. Open a terminal in assignly/public and run a bower update to ensure all components are up to date</p>
+
+<p>V. Switch back to /assignly and run meteor update to ensure all packages are up to date</p>
+
+<p>VI. Start meteor and enjoy. You are now running a local version of my app.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sqrdcat">sqrdcat</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
-
