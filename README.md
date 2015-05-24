@@ -1,28 +1,21 @@
-# assigny 0.1.3
+# dashboard
 
 [![forthebadge](http://forthebadge.com/images/badges/certified-snoop-lion.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 
-Assignment managing webapp built using the Meteor framework, Polymer paper elements and Materialize.
-Assignly lets you track and organize your tasks, assignments or jobs quickly and easily.
+The offline TODO server.
 
 ### Setting Up
 
-I. If you haven't already, install nodejs and npm through apt-get install or yum install if you have a REHL-based OS such as Fedora.
+I. Make sure meteor is installed, if not, run this command : $ curl http://install.meteor.com | sh
 
-II. Make sure meteor is installed, if not, run this command : $ curl http://install.meteor.com | sh
+IIa. If you have git installed, run : $ git clone https://github.com/sqrdcat/grpwrk.git
 
-IIIa. If you have git installed, run : $ git clone https://github.com/sqrdcat/assignly.git
+IIb. If you don't have git installed, download the files, extract them and point the terminal to that location using cd
 
-IIIb. If you don't have git installed, download the files, extract them and point the terminal to that location using cd
+III. Install bower with $ su - && npm install -g bower
 
-IV. Install bower with $ su - && npm install -g bower
+IV. Open a terminal in assignly/public and run a bower update to ensure all components are up to date
 
-V. Open a terminal in assignly/public and run a bower update to ensure all components are up to date
+V. Switch back to /assignly and run meteor update to ensure all packages are up to date
 
-VI. Switch back to /assignly and run meteor update to ensure all packages are up to date
-
-VII. Start meteor and enjoy. You are now running a local version of my app.
-
-### A live version of assignly is deployed at http://assignly.meteor.com
-
-## Production && Unsigned APKs available @ .build/android/project/bin
+VI. Start meteor and enjoy. You are now running a local version of my app.

@@ -1,0 +1,181 @@
+[[[[[ ~/Documents/grpwrk ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:111:6: Unexpected token {
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:111:4: Unexpected token ,
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:111:4: Unexpected token )
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)
+=> Server modified -- restarting...
+Changes to your project's package version selections:
+
+accounts-google          removed from your project
+accounts-twitter         added, version 1.0.4
+ccorcos:animate          removed from your project
+cfs:access-point         removed from your project
+cfs:base-package         removed from your project
+cfs:collection           removed from your project
+cfs:collection-filters   removed from your project
+cfs:data-man             removed from your project
+cfs:file                 removed from your project
+cfs:gridfs               removed from your project
+cfs:http-methods         removed from your project
+cfs:http-publish         removed from your project
+cfs:power-queue          removed from your project
+cfs:reactive-list        removed from your project
+cfs:reactive-property    removed from your project
+cfs:standard-packages    removed from your project
+cfs:storage-adapter      removed from your project
+cfs:tempstore            removed from your project
+cfs:upload-http          removed from your project
+cfs:worker               removed from your project
+coffeescript             removed from your project
+google                   removed from your project
+materialize:materialize  removed from your project
+mongo-livedata           removed from your project
+oauth1                   added, version 1.1.4
+oauth2                   removed from your project
+raix:eventemitter        removed from your project
+tommyjs:colpick          removed from your project
+twitter                  added, version 1.1.4
+velocityjs:velocityjs    removed from your project
+
+                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:118: Expected "form" end tag
+   ...button></span> </div> </form>
+   {{#eac...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:118: Expected "form" end tag
+   ...button></span> </div> </form>
+   {{#eac...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:121: Reactive HTML attributes must either have a constant name
+   or consist of a single {{helper}} providing a dictionary of names and
+   values.  A template tag of type BLOCKOPEN is not allowed here.
+   ...>  <ul id="mmbrs"             {{#each members}}
+   ...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:104:32: Unexpected token ;
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:147:31: Unexpected token (
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:153:31: Unexpected token (
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:179: Invalid character reference: &nspb;
+   ...er.com/{{username}}">&nspb;&nspb;&nspb;<h...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:179: Invalid character reference: &nspb;
+   ...er.com/{{username}}">&nspb;&nspb;&nspb;<h...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:179: Expected space
+   ...":hover{opacity:80;}"src="http://avatars....
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)=> Client modified -- refreshing (x12)=> Client modified -- refreshing (x13)=> Client modified -- refreshing (x14)=> Client modified -- refreshing (x15)[[[[[ ~/Documents/grpwrk ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:6969/

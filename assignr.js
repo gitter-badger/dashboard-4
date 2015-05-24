@@ -1,16 +1,5 @@
-/* 
-  ___          _             _       
- / _ \        (_)           | |      
-/ /_\ \___ ___ _  __ _ _ __ | |_   _ 
-|  _  / __/ __| |/ _` | '_ \| | | | |
-| | | \__ \__ \ | (_| | | | | | |_| |
-\_| |_/___/___/_|\__, |_| |_|_|\__, |
-                  __/ |         __/ |
-                 |___/         |___/ 
-
-*/
-
-Posts = new Ground.Collection("posts");
+Posts = new Meteor.Collection("posts");
+Members = new Meteor.Collection("members");
 
 Meteor.methods({
 
@@ -51,29 +40,17 @@ if (Meteor.isClient) {
        output("FOXTROT",3+3);
        Meteor.call("purge");
     }
-    $('.collapsible').collapsible({
-      accordion : false
-    });
 
-    $('select').material_select();
-    $('.colsel').material_select();
- $('.button-collapse').sideNav();
-
-    $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
-  });
-        
-    $(document).ready(function(){
-      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .9, // Opacity of modal background
-      in_duration: 50, // Transition in duration
-      out_duration: 10, // Transition out duration
+    gamma = function(){
+       output("GAMA",3+3);
+       Meteor.call("purgemmbrs");
     }
 
-  );
+
+    $('#purger').click(function(){ foxtrot(); return false; });
+
+    $(document).ready(function(){
+      
 });
 
 
@@ -83,6 +60,9 @@ if (Meteor.isClient) {
   Template.body.helpers({
     posts: function () {
       return Posts.find({}, {sort: {createdAt: -1}}, {reactive:false});
+    },
+     members: function () {
+      return Members.find({}, {sort: {createdAt: -1}}, {reactive:false});
     },
 
     postscount: function () {
@@ -101,8 +81,6 @@ if (Meteor.isClient) {
       var title = event.target.title.value;
       var color = event.target.colorselect.value;
       var article = event.target.contentins.value;
-      var due = event.target.duedate.value;
-      var eclair = Posts.find({}).count();
       var dexter;
 
       if(title != ""){
@@ -113,9 +91,7 @@ if (Meteor.isClient) {
           createdAt: new Date(), // current time
           dexter: data,
           color: color,
-          article: article,
-          due: due,
-          count: eclair
+          article: article
         });
             return false;
       });
@@ -127,20 +103,42 @@ if (Meteor.isClient) {
       event.target.article.value = "";
       return false;
   event.preventDefault();
-    }
+    },
 
-  }, {reactive:false});
+    "submit .new-member": function (event) {
+      var username = event.target.userinput.value;
+
+        Members.insert({
+          username: username,
+          createdAt: new Date()
+        });
+            
+
+      event.target.userinput.value = "";
+      return false;
+}
+
+  });
 
 
   Template.post.events({
     "click .delete": function () {
       if (confirm('Are you sure ?')) { 
 Posts.remove(this._id);
-document.querySelector('#toast3').show()
 }
       
     }
   });
+
+    Template.member.events({
+    "click .deletemmbr": function () {
+      if (confirm('Are you sure ?')) { 
+Members.remove(this._id);
+}
+      
+    }
+  });
+
 
 }
 
@@ -156,6 +154,10 @@ if (Meteor.isServer) {
         console.log(1+1);
 
       },
+      purgemmbrs: function() {
+
+        return Members.remove({});
+        console.log(1+1);},
 
       getPostsCount: function () {
       return Posts.find().count();

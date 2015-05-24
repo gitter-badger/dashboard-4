@@ -2,46 +2,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:100);
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-
-[drawer] {
-  background-color: white !important;
-  padding:30px !important;
-}
-
-[main] {
-    overflow: auto;
-}
-
-.brand-logo{
-	font-family: 'Martel Sans', sans-serif;
-	font-weight: light !important;
-    text-align: right;
-    top: 2px !important;
-	
-}
-
-core-header-panel{
-    background-color: blue !important;
-}
-
-#sideopener{}
-
-.mn{color: white !important;}
 
 body{
-background-position: center bottom;
-background-color: #f4f4f4;
+background-color: #f4f4f4 !important;
 
 }
 .submitbutton {
@@ -59,72 +22,21 @@ background-color: #f4f4f4;
     border: 0;
   }
 
-.catgif{
-    opacity:0.9;width:100vw;height:100vh;position: fixed;z-index: -100;
-    left: 0 !important;
-    top:0 !important;
-}
-
-
-.container {
-    margin: 15px;
-    padding-top: 70px !important;
-}
-
-#toast3{text-align: center;
-position: fixed;}
-
 html, body {
   height: 100%;
   margin: 0;
 }
-core-scroll-header-panel {
-  height: 100%;
-}
-
-
-core-icon[icon="done"] {
-    color: seagreen;
-    width:32px;
-    height: 32px;
-  }
 
 form{
 	text-align: center;
 }
 .cont{
 	padding:20px;
-	padding-left: 200px !important;
+}
+
 }
 
 
-@media screen and (max-width: 800px) {
-    .container {
-    	padding-left: 20px !important;
-    	margin: 0px !important;
-    }
-
-
-
-    .cont {
-    	padding-left: 20px !important;
-    }
-
-}
-
-.btn{
-    border-radius: 0px !important;
-    background-color: #3db39e !important;
-    color:gray;
-}
-
-.side-nav{
-	/*color:black;*/
-	padding: 10px;
-	padding-left: 0px !important;
-	background-color: #FBFBFB;
-	padding-right: 0px !important;
-}
 
 #padleft{
 
@@ -147,71 +59,4 @@ input{
 
 #black{color:#009688;}
 
-#psts{list-style-type: none;}
-
-
-core-toolbar{
-    background-color: #4DB6AC !important;
-}
-
-
-nav{
-	background-color:  /* #00897B */ transparent !important;
-	text-align: center;
-    position: fixed !important; 
-    box-shadow: none !important;
-}
-
-li{
-    font-family: 'Martel Sans', sans-serif;
-    font-weight: bolder !important;
-    text-align: left;
-}
-
-img{
-	text-align: center;
-}
-
-#nav-mobile{
-	position: center;
-}
-
-.logoimg{
-	width:60%;
-}
-
-#modal1{
-	height:1500px !important;
-	opacity: 1 !important;
-}
-
-.btn{color: white;}
-
-.card-panel{
-	color:black !important;
-}
-
-.colsel{
-	z-index: 1200;
-}
-
-paper-fab{
-	float:right !important;
-	position: fixed;
-	bottom:0;
-    right:0;
-    margin:15px;
-	background-color: #be382a !important;
-}
-
-paper-fab:focus {outline:0;}
-
-#addtooltip{
-    float:right !important;
-    position: fixed;
-    bottom:0;
-    right:0;
-    margin-bottom:40px;
-    margin-right: 80px;
-    font-size: 30pt;
-}
+#psts{list-style-type: none;margin-left: -30px !important;}

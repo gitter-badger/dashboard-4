@@ -1,136 +1,174 @@
 <head>
-	<title>Assignly 0.1</title>
-	<script src="bower_components/platform/platform.js"></script>
-	<link href="bower_components/paper-input/paper-input-decorator.html" rel="import">
-		<link href="bower_components/core-drawer-panel/core-drawer-panel.html" rel="import">
+	<title>#grpwrk 0.1</title>
 
-	<link href="bower_components/paper-button/paper-button-base.html" rel="import">
-	<link href="bower_components/paper-button/paper-button.html" rel="import">
-	<link href="bower_components/paper-item/paper-item.html" rel="import">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-	<link href="bower_components/paper-menu-button/paper-menu-button.html" rel="import">
-	<link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import"
-	>
-	<link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
-	<link href="bower_components/paper-fab/paper-fab.html" rel="import">
-	<link href="bower_components/paper-toast/paper-toast.html" rel="import">
-	<link href="animate.css" rel="stylesheet">
-	<link href="bower_components/core-icon/core-icon.html" rel="import">
-		<link href="bower_components/core-menu/core-menu.html" rel="import">
-				<link href="bower_components/core-toolbar/core-toolbar.html" rel="import">
-			<link href="bower_components/core-item/core-item.html" rel="import">
-		<link href="bower_components/core-icon-button/core-icon-button.html" rel="import">
-		<link href="bower_components/core-tooltip/core-tooltip.html" rel="import">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
-<core-drawer-panel>
-  <div class="sidedrawer" drawer> 
-<h4>Assignly.</h4><br>
-  		<core-menu selected="0">
-  <core-item icon="add" label="Add Assignment" href="#modal1" class="modal-trigger waves-effect waves-light"></core-item>
-  <core-item icon="done-all" label="Purge"   onclick="foxtrot();return 3+3;" class="waves-effect waves-light" id="purger" ></core-item>
-  <core-item icon="info" label="About"     href="#modal2" class="modal-trigger waves-effect waves-light"></core-item>
-</core-menu>
-
-   </div>
-  <div main> 
-<core-toolbar class="z-depth-1 ye">
-  	<core-icon-button icon="menu" core-drawer-toggle id="sideopener"> </core-icon-button>
-  <div class="bottom indent"><core-icon icon="assignment-ind"></core-icon>&nbsp;&nbsp;&nbsp; Assignments</div>
-</core-toolbar>
-
 
 <div class="cont">
 
 
 
-	<div id="modal1" class="modal bounceIn animated">
-		<div class="modal-content">
-			<h6>Add New Assignments</h6>
-		<form class="new-task">
-				<paper-input-decorator floatingLabel label="Title">
-				<input label="Title" id="title" name="title">
-						</paper-input-decorator>
-				<paper-input-decorator floatingLabel label="Description">
-				<input label="Description" name="contentins">
-						</paper-input-decorator>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+
+			MAIN
+
+-->
+<div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Heads Up!</strong> Launched the server using the shell script ? The process is now running in the background, if you wanna exit it then kill the node process.
+</div>
+
+
+		<div class="page-header">
+  <h1><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>    Dashboard <small>Main Overview </small></h1>
+</div>
+
+<div class="row">
+  <div class="col-md-7">
+  
+  					<ul id="psts">
+		
+			{{#each posts}}
+				{{> post}}
+			{{/each}}
+
+		</ul>	
+				{{#if equals postscount 0}}
+			<div style="text-align:center;">
+			   <h5 style="top:300px !important;font-family: 'Roboto', sans-serif;
+	font-weight: light !important;">Your tasks will be listed here.</h5>
+	</div>
+	
+
+			 {{/if}}
+
+
+
+
+  </div>
+
+
+
+  <div class="col-md-4">
+  	
+  	<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#" >Overview</a></li>
+   <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add TODO <span class="caret"></span></a>
+
+            <ul class="dropdown-menu" role="menu" style="padding:20px !important;">
+
+            <form class="new-task">
+
+				<input label="Title" id="title" name="title" placeholder="Title"/>
 <br>
-<input type="date" class="datepicker" name="duedate" placeholder="Due Date">
-		<br>
-							<select name="colorselect" class="colsel browser-default center-align">
+<br>
+				<input label="Description" name="contentins" placeholder="Description"/>
+
+		<br><br><select name="colorselect" class="colsel browser-default center-align">
 	<option value="black">Default</option>
 	<option value="teal">Teal</option>
 	<option value="crimson">Crimson</option>
 	<option value="indigo">Indigo</option>
 	<option value="MediumSeaGreen">Sea Green</option>
 </select><br>
-			<button type="submit" is="paper-button-submit" class="modal-action modal-close waves-effect waves-light submitbutton"><core-icon icon="done"></core-icon>
-			</button>
+			<button type="submit" class="submitbutton">Done</button>
 			</form>
-		</div>
-	</div>
-<div id="modal2" class="modal">
-		<div class="modal-content">
-			<h1>About Assingly</h1>
-				<p>Created by Emanuel S.</p>
-				<p>Pencil icon by Pixel Buddha</p><br>
-				<p>Built using Materialize and Meteor Framework</p>
-		</div>
-	</div>
-				<ul id="psts">
-		
-			{{#each posts}}
-				{{> post}}
+</ul>
+
+        </li>
+  <li role="presentation"><a href="#" id="purger">Remove All</a></li>
+</ul>
+<div class="page-header">
+  <h3>Crew</h3>
+</div>
+
+<form class="new-member">
+ <!-- <input type="text" name="userinput" placeholder="Username"/>
+  <span><button type="submit">Done</button></span>
+-->
+
+
+  <div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@</span>
+  <input type="text" name="userinput" class="form-control" placeholder="Add Twittr Username" aria-describedby="basic-addon1">
+</div>
+
+</form>
+<br>
+<ul class="list-group">
+			{{#each members}}
+				{{> member}}
 			{{/each}}
 
-		</ul>	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab></div>
-				{{#if equals postscount 0}}
-			<div style="text-align:center;">
-			   <h5 style="top:300px !important;font-family: 'Roboto', sans-serif;
-	font-weight: light !important;">You have no new assignments.</h5></div>
-		
-	<paper-fab icon="assignment" class="modal-trigger" href="#modal1"></paper-fab>
+</ul>
 
-			 {{/if}}
+
 
   </div>
-</core-drawer-panel>
 
 
-	
 
-	<script type="text/javascript">
-	$(document).ready(function() {
-	 $alert($('.side-nav').css('z-index', -10 - 1));
-}
-</script>
-	<paper-toast id="toast3" class="capsule core-transition core-transition-bottom" text="Assignment Checked Off !" icon="assignment-turned-in" style="padding-right: 60px; position: fixed; outline: none; z-index: 14444; box-sizing: border-box; display: none;" role="status" touch-action="none" tabindex="-1"></paper-toast>
+</div>
+
+
+
+
+
+
+  </div>
+
+
 </body>
 
 
 <template name="post">
-<script></script>
 
 
-	<div class="card-panel animated fadeIn" >
-					<span class="">
-					 <h3  style="color:{{color}} !important;">{{title}}</h3>
-					 <h5>{{due}}</h5>
-					<h6>{{article}}</h6>
-					</span><br>
-					 <div class="card-action">
-							<!--<paper-menu-button style="float:right;top:-29px;">
-		<paper-icon-button icon="menu" noink></paper-icon-button>
-		<paper-dropdown halign="right" class="dropdown">
-				<core-menu class="menu">
-						<paper-item class="delete" onclick="document.querySelector('#toast3').show()"><core-icon icon="arrow-forward"></core-icon>Turned In</paper-item>
-						<paper-item disabled>{{dexter}}</paper-item>
-				</core-menu>
-		</paper-dropdown>
-</paper-menu-button>--><paper-icon-button icon="close" class="delete" style="float:right;top:-29px;"></paper-icon-button>
+<div class="panel panel-default">
+  <div class="panel-body">
 
-						</div>
+					 <h2  style="color:{{color}} !important;">{{title}}</h2>
+					<h4>{{article}} / <small><a href="" class="delete">Delete</a></small></h4>
+
+
+  </div>
 </div>
 
+</template>
+
+<template name="member">
+	<li class="list-group-item dropdown"><img src="http://avatars.io/twitter/{{username}}" align="right" class="img-circle"/><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3>@{{username}}    <span class="caret"></span></h3></a>
+		<ul class="dropdown-menu" role="menu">
+		<li role="presentation"><a class="deletemmbr" role="menuitem" tabindex="-1" href="#">Delete</a></li>
+		</ul>
+
+	</li>
 </template>
