@@ -1,8 +1,6 @@
 Posts = new Meteor.Collection("posts");
 Members = new Meteor.Collection("members");
-
 Meteor.methods({
-
   charlie: function(){
       var d = new Date()
       var x = d.getDate();
@@ -10,28 +8,23 @@ Meteor.methods({
       var z = d.getFullYear();
       var alpha = d.getHours();
       var beta = d.getMinutes();
-
       return x + "." + y + "." + z + "  " + alpha + ":" + beta;
   }
-
 });
 
 if (Meteor.isClient) {
-
-
-
-
   output = function(proto,n){
       console.log("Output "+proto+" exited with code "+n)
     }
 
-  var curfew;
 
   Template.body.rendered = function () {
-
-    curfew = document.querySelector("#purger");
-    output('LOAD',1+1);
-
+    $.getScript("PROJECT.js");
+    output("LOADCONFIG",3+3)
+    document.getElementById("projtitle").innerHTML = projecttitle;
+    document.getElementById("projdesc").innerHTML = projectdesc;
+    document.getElementById("projver").innerHTML = projectver;
+    document.getElementById("projweb").innerHTML = projectweb;
     curfew.addEventListener("click", function onclick(event) {
         Meteor.call("purge");
       });
@@ -39,11 +32,6 @@ if (Meteor.isClient) {
     foxtrot = function(){
        output("FOXTROT",3+3);
        Meteor.call("purge");
-    }
-
-    gamma = function(){
-       output("GAMA",3+3);
-       Meteor.call("purgemmbrs");
     }
 
 

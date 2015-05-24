@@ -16,7 +16,14 @@ background-color: #f4f4f4 !important;
     border-color: transparent;
   }
 
+.row{
+    padding-left: 0px !important;
+    left: 0px !important;
+}
 
+.nav{
+font-size: 14pt !important;
+}
 
   .submitbutton button::-moz-focus-inner {
     border: 0;

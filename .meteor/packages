@@ -9,9 +9,4 @@ autopublish
 insecure
 accounts-ui
 jquery
-accounts-google
-tommyjs:colpick
-materialize:materialize
-ccorcos:animate
-cfs:standard-packages
-cfs:gridfs
+accounts-twitter
