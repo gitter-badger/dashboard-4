@@ -1,8 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Martel+Sans:200,900);
-
-@import url(http://fonts.googleapis.com/css?family=Roboto:100);
-
-
 body{
 background-color: #f4f4f4 !important;
 
@@ -42,28 +37,7 @@ form{
 }
 
 }
-
-
-
-#padleft{
-
-    top:0px !important;
-}
-
 input{
 	color:black !important;
 }
 
-#red{color:red;}
-
-#blue{color:indigo;}
-
-#yellow{color:yellow;}
-
-#green{color:green;}
-
-#time{font-size:5pt; color:gray;}
-
-#black{color:#009688;}
-
-#psts{list-style-type: none;margin-left: -30px !important;}

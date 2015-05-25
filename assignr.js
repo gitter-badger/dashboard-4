@@ -1,6 +1,8 @@
 Posts = new Meteor.Collection("posts");
 Members = new Meteor.Collection("members");
+
 Meteor.methods({
+  
   charlie: function(){
       var d = new Date()
       var x = d.getDate();
@@ -13,36 +15,39 @@ Meteor.methods({
 });
 
 if (Meteor.isClient) {
+
+   /* DEBUG HELPER */
   output = function(proto,n){
       console.log("Output "+proto+" exited with code "+n)
     }
 
 
+/* ================================================== */
+
   Template.body.rendered = function () {
+
+    /* IMPORT SCRIPTS */
+    $.getScript("internal/VARIABLES.js");
     $.getScript("PROJECT.js");
-    output("LOADCONFIG",3+3)
+
+    /* SET ELEMENTS TO THEIR RESPECTIVE CONFIG VARIABLES */
     document.getElementById("projtitle").innerHTML = projecttitle;
     document.getElementById("projdesc").innerHTML = projectdesc;
     document.getElementById("projver").innerHTML = projectver;
     document.getElementById("projweb").innerHTML = projectweb;
-    curfew.addEventListener("click", function onclick(event) {
-        Meteor.call("purge");
-      });
 
+    /* PURGE HELPERS */
     foxtrot = function(){
        output("FOXTROT",3+3);
        Meteor.call("purge");
     }
 
-
     $('#purger').click(function(){ foxtrot(); return false; });
 
-    $(document).ready(function(){
-      
-});
-
-
 } 
+
+
+/* ================================================== */
 
 
   Template.body.helpers({
@@ -62,10 +67,11 @@ if (Meteor.isClient) {
   });
 
 
+/* ================================================== */
 
   Template.body.events({
     "submit .new-task": function (event) {
-      // This function is called when the new task form is submitted
+
       var title = event.target.title.value;
       var color = event.target.colorselect.value;
       var article = event.target.contentins.value;
@@ -73,24 +79,23 @@ if (Meteor.isClient) {
 
       if(title != ""){
 
-      Meteor.call('charlie', function(err, data) {
           Posts.insert({
           title: title,
-          createdAt: new Date(), // current time
-          dexter: data,
+          createdAt: new Date(),
           color: color,
           article: article
         });
-            return false;
-      });
+      
+      return false;
+
 
             } else {
                   console.log("0xdeadbeef");
               } 
       event.target.title.value = "";
       event.target.article.value = "";
-      return false;
-  event.preventDefault();
+      event.preventDefault();
+
     },
 
     "submit .new-member": function (event) {
@@ -108,6 +113,7 @@ if (Meteor.isClient) {
 
   });
 
+/* ================================================== */
 
   Template.post.events({
     "click .delete": function () {
@@ -129,6 +135,8 @@ Members.remove(this._id);
 
 
 }
+
+/* ================================================== */
 
 if (Meteor.isServer) {
 
