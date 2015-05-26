@@ -32,7 +32,7 @@ if [ "$1" == "st" ]; then
         echo -e "\033[31m TIP : The output of the meteor server will be printed to nohup.opt\033[0m"
         echo "========================================"
         echo ""
-        echo "poopyfull."
+        nohup meteor run > out.txt &
     else
         echo -e "Checking if meteor is installed... \033[31mFAIL!\033[0m"
         echo ""
