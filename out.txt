@@ -1,0 +1,106 @@
+[[[[[ ~/Documents/grpwrk ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:64: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:64: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:55: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:55: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.html:134: bad formatting in HTML template
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:52: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:52: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:52: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:52: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Errors prevented startup:
+   
+   While building the application:
+   assignr.js:39:52: Invalid left-hand side in assignment
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing

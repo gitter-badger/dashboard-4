@@ -11,7 +11,7 @@
 </head>
 
 
-<body>
+<body id="bodybox">
 
 <!-- 
 
@@ -22,13 +22,13 @@
 <div class="cont">
 
 		<div class="page-header">
-  <h1><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>    Dashboard <small><span class="pull-right">{{> loginButtons }}</span></small></h1>
+  <h1><img src="icon.png" id="logo"/>    <small><span class="pull-right login">{{> loginButtons }}</span></small></h1>
 </div>
 
 <div class="row">
 
 <div class="col-lg-4">
-	 <div class="page-header"><h3>Project Details</h3>
+	 <div class="page-header spec"><h3>Project Details</h3>
 </div>
 <ul class="list-group">
 <li class="list-group-item disabled">Project Title</li>
@@ -44,7 +44,7 @@
 
   <div class="col-lg-4">
   
-  					<div class="page-header">
+  					<div class="page-header spec">
   <h3>Tasks {{{sh}}}</h3>
 </div>
 		
@@ -71,7 +71,7 @@
 
   <div class="col-lg-4">
   	
-<div class="page-header">
+<div class="page-header spec">
   <h3>Crew</h3>
 </div>
 {{#if currentUser}}
@@ -79,7 +79,7 @@
 
   <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" name="userinput" class="form-control" placeholder="Add Twittr Username" aria-describedby="basic-addon1">
+  <input type="text" name="userinput" class="form-control" placeholder="Add Twitter Username" aria-describedby="basic-addon1">
 </div>
 
 </form>{{/if}}
@@ -128,7 +128,9 @@
 </div>
 
   </div>
-
+<footer>
+<p><small>copr. © placeholder MMXV </small></p>
+</footer>
 
 </body>
 

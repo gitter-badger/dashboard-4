@@ -13,3 +13,8 @@
 /* PROJECT WEBSITE */
 	projectweb = "http://example.com";
 
+/* PAGE BG */
+    pagebg = "#f4f4f4";
+
+/* TEXT COLOR */
+	pageclr = "black";

@@ -7,5 +7,3 @@ var projectver;
 var projectweb;
 var pagebg;
 var pageclr;
-var postbg;
-var linkclr;

@@ -35,6 +35,8 @@ if (Meteor.isClient) {
     document.getElementById("projdesc").innerHTML = projectdesc;
     document.getElementById("projver").innerHTML = projectver;
     document.getElementById("projweb").innerHTML = projectweb;
+    document.body.style.backgroundColor = pagebg;
+    document.getElementById("bodybox").style.color = pageclr;
 
     /* PURGE HELPERS */
     foxtrot = function(){
