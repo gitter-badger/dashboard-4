@@ -1,5 +1,7 @@
 # dashboard
 
+[![Join the chat at https://gitter.im/sqrdcat/dashboard](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sqrdcat/dashboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![forthebadge](http://forthebadge.com/images/badges/certified-snoop-lion.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 
 Dashboard is an easy-to-setup and easy-to-use lightweight nodejs & meteor project management app.
